@@ -8,6 +8,6 @@ class RobotTest {
     public void shouldCreateRobotObjectWithPosition(){
         Robot robot = new Robot(new Position(0,0));
 
-        Assertions.assertTrue(robot.getPosition().equals(new Position(0,0)));
+        Assertions.assertEquals(robot.getPosition(), new Position(0, 0));
     }
 }
