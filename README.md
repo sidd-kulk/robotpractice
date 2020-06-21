@@ -2,7 +2,7 @@
 
 ## It's been long since I have practiced TDD in true spirit.  This is an attempt to do it.
 
-Thanks to this repo [this repo](https://github.com/SarthakMakhija/robot-simulation/)
+Thanks to [this repo](https://github.com/SarthakMakhija/robot-simulation/)
 
 # Problem definition
 A Robot is placed at an initial location in a hypothetical infinite grid. It is capable of moving in specific directions and letting you know its position.
