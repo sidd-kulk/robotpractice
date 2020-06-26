@@ -13,19 +13,19 @@ public class Position {
     }
 
     public Position left() {
-        return new Position(x-1, y);
+        return newPosition(x - 1, y);
     }
 
     public Position right() {
-        return new Position(x+1, y);
+        return newPosition(x+1, y);
     }
 
     public Position up() {
-        return new Position(x, y+1);
+        return newPosition(x, y+1);
     }
 
     public Position down() {
-        return new Position(x, y-1);
+        return newPosition(x, y-1);
     }
 
     @Override
@@ -48,5 +48,9 @@ public class Position {
                 "x=" + x +
                 ", y=" + y +
                 '}';
+    }
+
+    private Position newPosition(int i, int j) {
+        return new Position(i, j);
     }
 }
