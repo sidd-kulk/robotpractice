@@ -12,6 +12,14 @@ public class Position {
         this.y = y;
     }
 
+    public int getXPosition() {
+        return x;
+    }
+
+    public int getYPosition() {
+        return y;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
