@@ -15,7 +15,7 @@ class RobotTest {
     public void shouldMoveTheRobotUp(){
         Robot robot = new Robot(new Position(0,0));
 
-        robot.move(Directions.UP, 1);
+        robot.moveUp();
 
         Assertions.assertEquals(new Position(0, 1), robot.getCurrentPosition());
     }
@@ -24,7 +24,7 @@ class RobotTest {
     public void shouldMoveTheRobotDown(){
         Robot robot = new Robot(new Position(0,1));
 
-        robot.move(Directions.DOWN, 1);
+        robot.moveDown();
 
         Assertions.assertEquals(new Position(0, 0), robot.getCurrentPosition());
     }
@@ -33,7 +33,7 @@ class RobotTest {
     public void shouldMoveTheRobotRight(){
         Robot robot = new Robot(new Position(1,0));
 
-        robot.move(Directions.RIGHT, 1);
+        robot.moveRight();
 
         Assertions.assertEquals(new Position(2, 0), robot.getCurrentPosition());
     }
@@ -42,7 +42,7 @@ class RobotTest {
     public void shouldMoveTheRobotLeft(){
         Robot robot = new Robot(new Position(1,0));
 
-        robot.move(Directions.LEFT, 1);
+        robot.moveLeft();
 
         Assertions.assertEquals(new Position(0, 0), robot.getCurrentPosition());
     }

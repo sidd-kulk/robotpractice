@@ -12,12 +12,20 @@ public class Position {
         this.y = y;
     }
 
-    public int getXPosition() {
-        return x;
+    public Position left() {
+        return new Position(x-1, y);
     }
 
-    public int getYPosition() {
-        return y;
+    public Position right() {
+        return new Position(x+1, y);
+    }
+
+    public Position up() {
+        return new Position(x, y+1);
+    }
+
+    public Position down() {
+        return new Position(x, y-1);
     }
 
     @Override
