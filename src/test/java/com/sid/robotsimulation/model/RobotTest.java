@@ -50,4 +50,13 @@ class RobotTest {
 
         Assertions.assertEquals(positionObject(0, -3), robot.getCurrentPosition());
     }
+
+    @Test
+    public void shouldMoveTheRobotForCommands(){
+        Robot robot = new Robot(positionObject(0, 0));
+
+        robot.moveCommand(Directions.DOWN, Directions.UP, Directions.LEFT, Directions.RIGHT);
+
+        Assertions.assertEquals(positionObject(0, 0), robot.getCurrentPosition());
+    }
 }

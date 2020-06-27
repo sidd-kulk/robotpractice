@@ -11,26 +11,26 @@ public class Robot {
         return this.currentPosition;
     }
 
-    public void moveLeft() {
+    private void moveLeft() {
         this.currentPosition = this.currentPosition.left();
     }
 
-    public void moveRight() {
+    private void moveRight() {
         this.currentPosition = this.currentPosition.right();
     }
 
-    public void moveUp() {
+    private void moveUp() {
         this.currentPosition = this.currentPosition.up();
     }
 
-    public void moveDown() {
+    private void moveDown() {
         this.currentPosition = this.currentPosition.down();
     }
 
     public void moveCommand(Directions ... directions) {
         for (Directions direction: directions) {
             switch (direction) {
-                case UP: moveUp(); break;
+                case UP: moveUp() ; break;
                 case DOWN: moveDown();break;
                 case LEFT: moveLeft(); break;
                 case RIGHT: moveRight(); break;
