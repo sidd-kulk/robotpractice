@@ -16,38 +16,38 @@ class RobotTest {
     }
 
     @Test
-    public void shouldMoveTheRobotUp(){
+    public void shouldMoveTheRobotLeftNTimes(){
+        Robot robot = new Robot(positionObject(1, 0));
+
+        robot.moveCommand(Directions.LEFT, Directions.LEFT);
+
+        Assertions.assertEquals(positionObject(-1, 0), robot.getCurrentPosition());
+    }
+
+    @Test
+    public void shouldMoveTheRobotRightNTimes(){
         Robot robot = new Robot(positionObject(0, 0));
 
-        robot.moveUp();
+        robot.moveCommand(Directions.RIGHT, Directions.RIGHT, Directions.RIGHT);
 
-        Assertions.assertEquals(positionObject(0, 1), robot.getCurrentPosition());
+        Assertions.assertEquals(positionObject(3, 0), robot.getCurrentPosition());
     }
 
     @Test
-    public void shouldMoveTheRobotDown(){
-        Robot robot = new Robot(positionObject(0, 1));
+    public void shouldMoveTheRobotUpNTimes(){
+        Robot robot = new Robot(positionObject(0, 0));
 
-        robot.moveDown();
+        robot.moveCommand(Directions.UP, Directions.UP, Directions.UP);
 
-        Assertions.assertEquals(positionObject(0, 0), robot.getCurrentPosition());
+        Assertions.assertEquals(positionObject(0, 3), robot.getCurrentPosition());
     }
 
     @Test
-    public void shouldMoveTheRobotRight(){
-        Robot robot = new Robot(positionObject(1, 0));
+    public void shouldMoveTheRobotDownNTimes(){
+        Robot robot = new Robot(positionObject(0, 0));
 
-        robot.moveRight();
+        robot.moveCommand(Directions.DOWN, Directions.DOWN, Directions.DOWN);
 
-        Assertions.assertEquals(positionObject(2, 0), robot.getCurrentPosition());
-    }
-
-    @Test
-    public void shouldMoveTheRobotLeft(){
-        Robot robot = new Robot(positionObject(1, 0));
-
-        robot.moveLeft();
-
-        Assertions.assertEquals(positionObject(0, 0), robot.getCurrentPosition());
+        Assertions.assertEquals(positionObject(0, -3), robot.getCurrentPosition());
     }
 }

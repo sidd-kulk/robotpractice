@@ -21,24 +21,24 @@ class PositionTest {
     @Test
     void moveLeft() {
         Position leftPosition = position.left();
-        assertEquals(positonObject(0, 1), leftPosition);
+        assertEquals(new Position(0,1), leftPosition);
     }
 
     @Test
     void moveRight() {
         Position rightPosition = position.right();
-        assertEquals(positonObject(2, 1), rightPosition);
+        assertEquals(new Position(2,1), rightPosition);
     }
 
     @Test
     void moveUp() {
         Position upPosition = position.up();
-        assertEquals(positonObject(1, 2), upPosition);
+        assertEquals(new Position(1,2), upPosition);
     }
 
     @Test
     void moveDown() {
         Position downPosition = position.down();
-        assertEquals(positonObject(1, 0), downPosition);
+        assertEquals(new Position(1,0), downPosition);
     }
 }

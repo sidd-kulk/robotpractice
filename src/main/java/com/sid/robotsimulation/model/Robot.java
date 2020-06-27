@@ -27,4 +27,14 @@ public class Robot {
         this.currentPosition = this.currentPosition.down();
     }
 
+    public void moveCommand(Directions ... directions) {
+        for (Directions direction: directions) {
+            switch (direction) {
+                case UP: moveUp(); break;
+                case DOWN: moveDown();break;
+                case LEFT: moveLeft(); break;
+                case RIGHT: moveRight(); break;
+            }
+        }
+    }
 }
