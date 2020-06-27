@@ -2,13 +2,19 @@ package com.sid.robotsimulation.model;
 
 public class Robot {
     private Position currentPosition;
+    private final Position initialPosition;
 
     public Robot(Position startPosition) {
         this.currentPosition = startPosition;
+        this.initialPosition = startPosition;
     }
 
     public Position getCurrentPosition() {
         return this.currentPosition;
+    }
+
+    public Position getInitialPosition() {
+        return initialPosition;
     }
 
     private void moveLeft() {

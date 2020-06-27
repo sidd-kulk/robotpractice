@@ -6,11 +6,6 @@ import com.sid.robotsimulation.model.Robot;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.bootstrap.DOMImplementationRegistry;
-
-import java.util.zip.DeflaterInputStream;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class RobotControllerTest {
 

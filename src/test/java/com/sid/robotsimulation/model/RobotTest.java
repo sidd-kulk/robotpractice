@@ -59,4 +59,13 @@ class RobotTest {
 
         Assertions.assertEquals(positionObject(0, 0), robot.getCurrentPosition());
     }
+
+    @Test
+    public void shouldGetTheInitialPositionOfRobot(){
+        Robot robot = new Robot(positionObject(0,0));
+
+        robot.moveCommand(Directions.UP, Directions.DOWN);
+
+        Assertions.assertEquals(positionObject(0,0), robot.getInitialPosition());
+    }
 }
